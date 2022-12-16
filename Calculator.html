@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<script>
+    function Sum() {
+        f.izhod.value = parseInt(f.chislo1.value) + parseInt(f.chislo2.value);
+    }
+    function Subtract() {
+        f.izhod.value = parseInt(f.chislo1.value) - parseInt(f.chislo2.value);
+    }
+    function Multiplay() {
+        f.izhod.value = parseInt(f.chislo1.value) * parseInt(f.chislo2.value);
+    }
+    function Divade() {
+        f.izhod.value = parseInt(f.chislo1.value) / parseInt(f.chislo2.value);
+    }
+</script>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Calcolator</title>
+    <style>
+
+
+        fieldset {
+            width: 600px;
+            height: 600px;
+            background-color: bisque;
+        }
+        body {
+            background-color:lightpink;
+            text-align: center;
+            color: blue;
+            font-size: 20px;
+        }
+        .buttons{
+            text-align:center;
+            margin-top:20px;
+        }
+        button{
+            background-color:#4a77ae;
+            width:150px;
+            height:150px;
+            margin:15px;
+            color:lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <form name="f" action="/" method="post">
+        <fieldset>
+            <legend>Калкулатор</legend>
+            <label for="chislo1">Enter number</label>
+            <br />
+            <input type="text" name="chislo1" id="chislo1" />
+            <br />
+            <br />
+            <label for="chislo2" id="ch2">Enter 2nd number</label>
+            <br />
+            <input type="text" name="chislo2" id="chislo2" />
+            <br />
+            <br />
+            <label for="izhod">Result</label>
+            <br />
+            <input type="text" name="izhod" id="izhod" readonly />
+            <label id="izhod"></label>
+            <div class="buttons">
+                <button type="button" onclick="Sum()">Sum</button>
+                <button type="button" onclick="Subtract()">Subtract</button>
+                <button type="button" onclick="Multiplay()">Multiplay</button>
+                <button type="button" onclick="Divade()">Divade</button>
+            </div>
+            <br />
+        </fieldset>
+    </form>
+</body>
+</html>
